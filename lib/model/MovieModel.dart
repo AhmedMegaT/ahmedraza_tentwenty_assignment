@@ -1,7 +1,11 @@
+import 'package:floor/floor.dart';
+
+@entity
 class MovieModel {
   bool? adult;
   String? backdropPath;
   List<int>? genreIds;
+  @primaryKey
   int? id;
   String? originalLanguage;
   String? originalTitle;
@@ -16,19 +20,19 @@ class MovieModel {
 
   MovieModel(
       {this.adult,
-        this.backdropPath,
-        this.genreIds,
-        this.id,
-        this.originalLanguage,
-        this.originalTitle,
-        this.overview,
-        this.popularity,
-        this.posterPath,
-        this.releaseDate,
-        this.title,
-        this.video,
-        this.voteAverage,
-        this.voteCount});
+      this.backdropPath,
+      this.genreIds,
+      this.id,
+      this.originalLanguage,
+      this.originalTitle,
+      this.overview,
+      this.popularity,
+      this.posterPath,
+      this.releaseDate,
+      this.title,
+      this.video,
+      this.voteAverage,
+      this.voteCount});
 
   MovieModel.fromJson(Map<String, dynamic> json) {
     adult = json['adult'];

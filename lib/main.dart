@@ -1,8 +1,15 @@
+import 'package:ahmedraza_tentwenty_assignment/AppDatabase.dart';
 import 'package:ahmedraza_tentwenty_assignment/movie_list.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final database = await $FloorFlutterDatabase
+      .databaseBuilder('flutter_database.db')
+      .build();
+  final dao = database.movieDao;
   runApp(MyApp());
 }
 
