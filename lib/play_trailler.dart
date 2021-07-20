@@ -48,6 +48,7 @@ class _PlayTraillerState extends State<PlayTrailler> {
   void dispose() {
     _videoPlayerController1.dispose();
     _chewieController?.dispose();
+
     super.dispose();
   }
   @override
